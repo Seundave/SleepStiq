@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .container {
+    @apply ml-[162px] bg-red-400 mx-auto items-center;
+  }
+  .paragraph-text {
+    @apply text-[16px];
+  }
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -70,6 +79,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
-
-
-
