@@ -1,0 +1,1 @@
+export { default as aboutImageTwo } from "./Group 3.png";

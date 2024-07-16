@@ -35,11 +35,152 @@ const Testimonial = [
   {
     id: 2,
     image: profile,
-    name: "Mrs. Adedusi Omolabake Victoria",
+    name: "Mrs. Adedusi ",
     role: "Auditor",
     testimony:
-      "I first learned about GOMAL Baptist College through a family friend. He spoke highly of how the school has transformed the lives of many children, including those who were once considered stubborn. This convinced me that GOMAL was the right choice for my child. I am pleased to say that GOMAL has exceeded my expectations. The school employs highly qualified teachers who are dedicated to their students' success. Their teaching methods are exceptional, and they place a strong emphasis on discipline, which has been invaluable in shaping my child's character. I wholeheartedly recommend GOMAL Baptist College to any parent seeking a high-quality education and a nurturing, disciplined environment for their child. GOMAL has made a significant positive impact on my child's life, and I am confident it will do the same for others.",
+      "I’m a very anxious person but use this and feel so relaxed and sleep way better now with the aid of sleepstiq. ",
   },
 ];
 
-export { navData, Testimonial };
+const Missions = [
+  {
+    id: 1,
+    mission: "✓ Promote Calm ",
+  },
+  {
+    id: 2,
+    mission: "✓ Support Sleep ",
+  },
+  {
+    id: 3,
+    mission: "✓ Reduce Stress ",
+  },
+  {
+    id: 4,
+    mission: "✓ Aid Relaxation",
+  },
+];
+
+const AboutSleepStiq = [
+  {
+    id: 1,
+    about: "😊  Promotes calm and relaxation.",
+  },
+  {
+    id: 2,
+    about: "💤  Inhalation allows for a rapid effect.",
+  },
+  {
+    id: 3,
+    about: "✅  100% drug-free, plant-based ingredients.",
+  },
+  {
+    id: 4,
+    about: "‍⚕️  3rd-party lab tested.",
+  },
+];
+
+const FaqCategory = [
+  {
+    id: 1,
+    title: "Sleepstiq Product",
+  },
+  {
+    id: 2,
+    title: "Order",
+  },
+  {
+    id: 3,
+    title: "Melantonin",
+  },
+];
+
+const FaqData = [
+  {
+    id: 1,
+    question: "Q1: How does it work?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+  {
+    id: 2,
+    question: "Q2: Why inhale melatonin?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+  {
+    id: 3,
+    question: "Q3: How much melatonin is there per inhale?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+
+  {
+    id: 4,
+    question: "Q4: Is it an e-cigarette or tobacco product?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+
+  {
+    id: 5,
+    question: "Q5: What's in it?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+  {
+    id: 6,
+    question: "Q6: What's not in it?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+  {
+    id: 7,
+    question: "Q7: How long does it last?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+
+  {
+    id: 8,
+    question: "Q8: How do I know it has run out/died?",
+    answer:
+      "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
+  },
+];
+
+const AllReviews = [
+  {
+    id: 1,
+    review:
+      "Love it! I have trouble falling asleep and this knocked me right out. Will be buying more.",
+    reviewer: "John Matthews",
+  },
+  {
+    id: 2,
+    review:
+      "I work shift work. Swinging from days to nights is sometimes brutal for sleep. Thank you Sleepstiq.",
+    reviewer: "Eunice Oliver",
+  },
+  {
+    id: 3,
+    review: "It’s a really good product and helps me sleep better at night!",
+    reviewer: "Laura Davies",
+  },
+  {
+    id: 4,
+    review:
+      "Helps me relax and remember to breathe. Stress level definitely goes down",
+    reviewer: "Jane Bocks",
+  },
+];
+
+export {
+  navData,
+  Testimonial,
+  Missions,
+  AboutSleepStiq,
+  FaqCategory,
+  FaqData,
+  AllReviews,
+};

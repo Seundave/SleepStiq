@@ -3,7 +3,7 @@ import SliderContent from '../../components/Slider'
 import { Testimonial } from "../../constants/data";
 
 
-const Testimonial = () => {
+const Testimonials = () => {
   return (
     <div>
       <SliderContent testimonialBy={Testimonial}/>
@@ -11,4 +11,4 @@ const Testimonial = () => {
   )
 }
 
-export default Testimonial
+export default Testimonials

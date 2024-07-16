@@ -46,10 +46,10 @@ const SliderContent = ({ testimonialBy }) => {
   };
 
   return (
-    <div className="relative h-full">
+    <div className="relative">
       <div className="overflow-hidden h-auto">
         <div
-          className="flex transition-transform duration-300 ease-in-out  w-full justify-between  mt-[20px]"
+          className="flex transition-transform duration-300 ease-in-out  w-full justify-between"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
@@ -63,79 +63,52 @@ const SliderContent = ({ testimonialBy }) => {
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-sm:w-[100%] lg:w-[45%] flex flex-col items-center gap-5 py-[30px] p-[15px]"
+                  className="max-sm:w-[100%] shadow-lg bg-[#FBF9F2] h-[474px] lg:w-[100%] flex flex-col items-center pt-[55px] px-[40px] justify-center"
                 >
-                  <div className="border border-gray-300 w-[120px] h-[120px] rounded-full p-[20px] justify-center items-center flex">
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="w-[110px] h-[80px] rounded-full object-cover"
-                    />
-                  </div>
                   <div>
-                    <p className="text-center text-[18px] text-green-500 font-bold">
-                      {item.name}
-                    </p>
-                    <p className="text-center text-[14px]">{item.role}</p>
+                    <p className="text-[24px] text-justify italic leading-[40px]">{item.testimony}</p>
                   </div>
-
-                  <div className="p-[30px] bg-[#F0FBFC] h-auto">
-                    <p className="text-[12px] text-justify">{item.testimony}</p>
-                  </div>
-
-                  {/* <div className="  h-[200px]  justify-center items-center flex">
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="w-[600px] h-[200px] object-contain"
-                    />
-                  </div>
-                  <div className="flex flex-col">
+                  <div className="flex w-full items-center gap-[35px] mt-[106px]">
+                    <div className="w-[120px] h-[120px] rounded-full p-[20px] justify-center items-center flex">
+                      <img
+                        src={item.image}
+                        alt=""
+                        className="w-[110px] h-[80px] rounded-full object-cover"
+                      />
+                    </div>
                     <div>
-                      <p className="text-center text-[18px] text-green-500 font-bold">
-                        {item.name}
-                      </p>
-                      <p className="text-center text-[14px]">{item.role}</p>
+                      <div>
+                        <p className="text-center text-[22px] text-[#4D533C] font-bold">
+                          {item.name}
+                        </p>
+                        <p className="text-center text-[#152934] text-[16px]">{item.role}</p>
+                      </div>
                     </div>
-
-                    <div className="p-[30px] bg-[#F0FBFC] h-auto">
-                      <p className="text-[12px] text-justify">
-                        {item.testimony}
-                      </p>
-                    </div>
-                  </div> */}
+                  </div>
+                
                 </div>
               ))}
+              
             </div>
+            
           ))}
         </div>
-      </div>
-
-      {/* <button
-        className="absolute top-[20%] md:bottom-0 md:top-[20%] left-4 transform -translate-y-1/2 text-[30px] text-[#22C55E] p-2 rounded-full font-bold"
-        onClick={prevSlide}
-      >
-        {"<"}
-      </button>
-
-      <button
-        className="absolute top-[20%] md:bottom-0 md:top-[20%] right-4 transform -translate-y-1/2 text-[30px] text-[#22C55E] p-2 rounded-full font-bold"
-        onClick={nextSlide}
-      >
-        {">"}
-      </button> */}
-
-      <div className="absolute  left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute top-[90%]  left-1/2 transform -translate-x-1/2 flex space-x-2">
         {groupedTestimonials.map((_, index) => (
           <button
             key={index}
             className={`h-2 w-2 rounded-full bg-gray-500 ${
-              currentIndex === index ? "bg-green-500" : ""
+              currentIndex === index ? "bg-[#12305B]" : ""
             }`}
             onClick={() => goToSlide(index)}
           />
         ))}
       </div>
+      </div>
+
+  
+
+     
     </div>
   );
 };
