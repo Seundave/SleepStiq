@@ -3,7 +3,7 @@ import PrimaryButton from "../../reusables/PrimaryButton";
 
 const VisitShop = () => {
   return (
-    <div className="mt-[159px] flex flex-col justify-center items-center">
+    <div className="md:mt-[159px] mt-[50px] flex flex-col justify-center items-center px-[30px] md:px-0">
       <h1 className="header-text">Visit Our Shop</h1>
       <p className="paragraph-text max-w-[915px] mx-auto justify-center mt-[30px] mb-[20px] text-center">
         Our Personal Diffuser is an aromatherapy device that contains a blend of
@@ -13,7 +13,7 @@ const VisitShop = () => {
       </p>
       <PrimaryButton text={"Visit Shop"} />
       <div className="container">
-        <hr className="mt-[165px] border-1 border-[#213842] border-opacity-[9.56%]" />
+        <hr className="md:mt-[165px] mt-[40px] border-1 border-[#213842] border-opacity-[9.56%]" />
       </div>
     </div>
   );

@@ -10,12 +10,12 @@ import {
 
 const Brands = () => {
   return (
-    <div className=" h-[131px]  w-full flex items-center bg-white shadow-2xl gap-[50px] pl-[72px] pr-[82px]">
-      <ImageBox width="w-[146px]" image={google}/>
-      <ImageBox width="w-[129px]" image={forbes}/>
-      <ImageBox width="w-[226px]" image={bloomberg}/>
-      <ImageBox width="w-[201px]" image={sleepReview}/>
-      <ImageBox width="w-[220px]" image={influencive}/>
+    <div className="h-[80px] md:h-[131px]  w-full flex items-center bg-white shadow-2xl gap-[50px] px-[20px] md:pl-[72px] md:pr-[82px]">
+      <ImageBox width="w-[146px]" image={google} />
+      <ImageBox width="w-[129px]" image={forbes} />
+      <ImageBox width="w-[226px]" image={bloomberg} />
+      <ImageBox width="w-[201px]" image={sleepReview} />
+      <ImageBox width="w-[220px]" image={influencive} />
       {/* <Grid container>
         <Grid item sm={12 / 5}>
           <img src={google} alt="google" />

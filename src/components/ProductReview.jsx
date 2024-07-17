@@ -64,14 +64,14 @@ const ProductReview = ({ review }) => {
                   className="max-sm:w-[100%] shadow-2xl  rounded-md justify-end bg-white lg:w-[45%] flex flex-col gap-5"
                 >
                   <div>
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt="" className="w-full"/>
                   </div>
-                  <div className="max-h-[78px] px-[30px] mt-[16px]">
+                  <div className="max-h-[78px] px-[15px] md:px-[30px] mt-[16px]">
                     <p className="text-[16px] text-justify text-[#4D533C] italic">
                       {item.review}
                     </p>
                   </div>
-                  <div className="mb-[9px] px-[30px] mt-[20px]">
+                  <div className="mb-[9px] px-[15px] md:px-[30px] mt-[20px]">
                     <p className="text-[16px] text-[#4D533C] font-bold mb-[9px]">
                       {item.reviewer}
                     </p>

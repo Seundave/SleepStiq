@@ -58,13 +58,13 @@ const ReviewContent = ({ testimonialBy }) => {
           {groupedTestimonials.map((group, index) => (
             <div
               key={index}
-              className="flex w-full flex-shrink-0 max-sm:justify-center pl-[154px] md:justify-between gap-5 overflow-hidden"
+              className="flex w-full flex-shrink-0 max-sm:justify-center mx-[30px] md:pl-[154px] md:justify-between gap-5 overflow-hidden"
               style={{ width: "100%" }}
             >
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-sm:w-[100%] rounded-md justify-end bg-[#FBF9F2] lg:w-[45%] flex flex-col gap-5 py-[20px] px-[30px]"
+                  className="max-md:w-[100%] rounded-md justify-between bg-[#FBF9F2] lg:w-[45%] flex flex-col gap-5 py-[20px] px-[30px]"
                 >
                  <div className="max-h-[78px]">
                     <p className="text-[16px] text-justify text-[#4D533C] italic">{item.review}</p>

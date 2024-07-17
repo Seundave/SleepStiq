@@ -68,7 +68,7 @@ const SliderContent = ({ testimonialBy }) => {
                   <div>
                     <p className="text-[24px] text-justify italic leading-[40px]">{item.testimony}</p>
                   </div>
-                  <div className="flex w-full items-center gap-[35px] mt-[106px]">
+                  <div className="flex w-full items-center gap-[35px] mt-[40px] md:mt-[106px]">
                     <div className="w-[120px] h-[120px] rounded-full p-[20px] justify-center items-center flex">
                       <img
                         src={item.image}

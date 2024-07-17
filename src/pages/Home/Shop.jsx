@@ -4,11 +4,11 @@ import { shopImage } from "../../assets/Home";
 
 const Shop = () => {
   return (
-    <div className="flex pr-[187px] gap-[56px] items-center justify-center">
-      <div className="w-[62%] flex justify-end max-h-[580px] ">
+    <div className="md:flex md:flex-row flex flex-col md:pr-[187px] md:gap-[56px] items-center justify-center">
+      <div className="w-full md:w-[62%] flex justify-end max-h-[580px] ">
         <img src={shopImage} alt="" className=" h-full placeholder:shadow-2xl" />
       </div>
-      <div className="w-[38%]">
+      <div className="w-full md:w-[38%] px-[30px] md:mx-0">
         <h2 className="header-text">Shop Now</h2>
         <p className="paragraph-text mt-[27px] mb-[20px]">
           Our Personal Diffuser is an aromatherapy device that contains a blend
