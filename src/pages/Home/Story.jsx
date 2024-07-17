@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Story = () => {
   return (
-    <div className="container flex justify-between  mt-[113px] mb-[152px] h-[474px]">
+    <div className="px-[154px] flex justify-between items-center mt-[150px] mb-[152px] h-[474px]">
       <div className="w-[45%]">
         <p className="text-[14px] text-[#12305B]">Our Amazing Story</p>
         <p className="mt-[29px] mb-[56px] header-text">10k+Happy Customers</p>
@@ -23,12 +23,10 @@ const Story = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-green-400 w-[45%] h-[474px]">
+      <div className="bg-green-400 w-[45%] h-[474px] shadow-2xl">
         <SliderContent testimonialBy={Testimonial} />
       </div>
-      {/* <div className="w-[50%]">
-        <SliderContent testimonialBy={Testimonial} />
-      </div> */}
+     
     </div>
   );
 };

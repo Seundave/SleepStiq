@@ -8,8 +8,8 @@ const Faq = () => {
     setExpandedItem((prevItem) => (prevItem === itemId ? null : itemId));
   };
   return (
-    <div className="flex  max-w-[1044px] mx-auto pb-[165px] pt-[70px]">
-      <div className="w-[212px] flex flex-col gap-[30px]">
+    <div className="flex pb-[165px] pt-[70px] gap-[65px] ml-[66px] mr-[184px]">
+      <div className="w-[15%] flex flex-col gap-[30px]">
         {FaqCategory.map((el, index) =>
           el.id === 1 ? (
             <div key={index} className="flex items-center space-x-2">
@@ -28,7 +28,7 @@ const Faq = () => {
           )
         )}
       </div>
-      <div className="flex flex-wrap w-full justify-between px-[10px] md:px-[138px] ">
+      <div className="flex w-[85%] flex-wrap justify-between">
         {FaqData.map((item) => (
           <div key={item.id} className={`w-full rounded`}>
             <div

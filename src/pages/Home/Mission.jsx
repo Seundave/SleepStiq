@@ -4,10 +4,10 @@ import { Missions } from "../../constants/data";
 
 const Mission = () => {
   return (
-    <div className="flex mt-[165px] justify-between gap-[58px]">
-      <div className="w-[40%] max-w-[475px] flex flex-col justify-center ml-[172px]">
+    <div className="flex mt-[165px]  gap-[58px] ml-[172px]">
+      <div className="w-[37%] max-w-[475px] flex flex-col justify-center">
         <h1 className="header-text">Our Mission</h1>
-        <p className="paragraph-text">
+        <p className="paragraph-text mt-[28px]">
           We started Sleepstiq with 1 simple goal: to be your best friend at
           bedtime. We, just like you, deal with stress, unease, and trouble
           sleeping from a number of silly things like school, work, screens,
@@ -21,7 +21,7 @@ const Mission = () => {
           ))}
         </div>
       </div>
-      <div className="w-[55%]">
+      <div className="w-[61%]">
         <img src={mission} alt="" className="w-full h-full" />
       </div>
     </div>

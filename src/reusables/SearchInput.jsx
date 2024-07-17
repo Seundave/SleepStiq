@@ -8,7 +8,7 @@ const SearchInput = () => {
       <input
         type="text"
         placeholder="Search FAQs here"
-        className="outline-none ml-[27px] w-full"
+        className="outline-none ml-[27px] w-full rounded-lg"
       />
     </div>
   );

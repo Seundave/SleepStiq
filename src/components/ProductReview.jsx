@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { rating } from "../assets/Home";
 // import { Testimonial } from "../pages/Home/data";
 
-const ReviewContent = ({ testimonialBy }) => {
+const ProductReview = ({ review }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -21,24 +21,21 @@ const ReviewContent = ({ testimonialBy }) => {
     };
   }, []);
 
-  const groupedTestimonials = [];
+  const groupedReview = [];
   const itemsPerGroup = isMobile ? 1 : isTablet ? 2 : 4;
 
-  for (let i = 0; i < testimonialBy.length; i += itemsPerGroup) {
-    groupedTestimonials.push(testimonialBy.slice(i, i + itemsPerGroup));
+  for (let i = 0; i < review.length; i += itemsPerGroup) {
+    groupedReview.push(review.slice(i, i + itemsPerGroup));
   }
 
   const nextSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex + 1) % groupedTestimonials.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % groupedReview.length);
   };
 
   const prevSlide = () => {
     setCurrentIndex(
       (prevIndex) =>
-        (prevIndex - 1 + groupedTestimonials.length) %
-        groupedTestimonials.length
+        (prevIndex - 1 + groupedReview.length) % groupedReview.length
     );
   };
 
@@ -50,51 +47,52 @@ const ReviewContent = ({ testimonialBy }) => {
     <div className="relative h-full">
       <div className="overflow-hidden h-auto">
         <div
-          className="flex transition-transform duration-300 ease-in-out  w-full justify-between  mt-[20px]"
+          className="flex transition-transform duration-300 ease-in-out  w-full justify-between"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
         >
-          {groupedTestimonials.map((group, index) => (
+          {groupedReview.map((group, index) => (
             <div
               key={index}
-              className="flex w-full flex-shrink-0 max-sm:justify-center pl-[154px] md:justify-between gap-5 overflow-hidden"
+              className="flex w-full flex-shrink-0 max-sm:justify-center md:justify-between gap-[53px] overflow-hidden"
               style={{ width: "100%" }}
             >
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-sm:w-[100%] rounded-md justify-end bg-[#FBF9F2] lg:w-[45%] flex flex-col gap-5 py-[20px] px-[30px]"
+                  className="max-sm:w-[100%] shadow-2xl  rounded-md justify-end bg-white lg:w-[45%] flex flex-col gap-5"
                 >
-                 <div className="max-h-[78px]">
-                    <p className="text-[16px] text-justify text-[#4D533C] italic">{item.review}</p>
+                  <div>
+                    <img src={item.image} alt="" />
                   </div>
-                  <div className="mb-[9px]">
-                    <p className="text-[16px] text-[#4D533C] font-bold">
+                  <div className="max-h-[78px] px-[30px] mt-[16px]">
+                    <p className="text-[16px] text-justify text-[#4D533C] italic">
+                      {item.review}
+                    </p>
+                  </div>
+                  <div className="mb-[9px] px-[30px] mt-[20px]">
+                    <p className="text-[16px] text-[#4D533C] font-bold mb-[9px]">
                       {item.reviewer}
                     </p>
                     <img src={rating} alt="rating" />
                   </div>
-
-                  
-
-                  
                 </div>
               ))}
             </div>
           ))}
         </div>
         <div className="absolute top-[107%]  left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {groupedTestimonials.map((_, index) => (
-          <button
-            key={index}
-            className={`h-2 w-2 rounded-full bg-gray-500 ${
-              currentIndex === index ? "bg-green-500" : ""
-            }`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div>
+          {groupedReview.map((_, index) => (
+            <button
+              key={index}
+              className={`h-2 w-2 rounded-full bg-gray-500 ${
+                currentIndex === index ? "bg-green-500" : ""
+              }`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
       </div>
 
       {/* <button
@@ -110,10 +108,8 @@ const ReviewContent = ({ testimonialBy }) => {
       >
         {">"}
       </button> */}
-
-     
     </div>
   );
 };
 
-export default ReviewContent;
+export default ProductReview;

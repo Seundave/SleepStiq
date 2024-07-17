@@ -7,7 +7,7 @@ function NoPage() {
   const handleClick = ()=> navigate(-1)
 
   return (
-    <div className="h-[100%] flex justify-center items-center">
+    <div className="h-[100%] flex justify-center items-center mt-[50px]">
       <div className="flex flex-col items-center mb-20 mt-20 text-[40px]">
         <h1>PAGE NOT FOUND</h1>
         <h2>

@@ -5,17 +5,10 @@ import Footer from "../../components/Footer";
 
 const index = () => {
   return (
-    <div
-      style={{
-        backgroundImage: "url(/about.png)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100vh",
-      }}
-    >
+    <div>
       <Hero />
-      <About/>
-      <Footer/>
+      <About />
+      <Footer />
     </div>
   );
 };

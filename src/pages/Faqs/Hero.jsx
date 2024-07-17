@@ -4,11 +4,11 @@ import SearchInput from "../../reusables/SearchInput";
 
 const Hero = () => {
   return (
-    <div className="h-screen bg-[#FBF9F2]">
-      <Navbar />
-      <div className="mt-[115px] ml-[162px]">
-        <p className=" text-[18px]">We're here to help you</p>
-        <h1 className="text-[60px] font-bold">How can we assist?</h1>
+    <div className=" bg-[#FBF9F2] h-[596px] pt-[200px] px-[154px]">
+      {/* <Navbar /> */}
+      <div>
+        <p className=" text-[18px] text-[#12305B]">We're here to help you</p>
+        <h1 className="text-[60px] font-bold text-[#12305B]">How can we assist?</h1>
         <SearchInput/>
       </div>
     </div>

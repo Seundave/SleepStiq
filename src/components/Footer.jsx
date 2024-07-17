@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div
-      className="max-h-[526px] bg-[#043C50] py-[35px]"
+      className="px-[58px] bg-[#043C50] py-[35px]"
       style={{
         backgroundImage: "url(/Object.png)",
         backgroundSize: "cover",
@@ -13,19 +13,33 @@ const Footer = () => {
         // height: "100vh",
       }}
     >
-      <div className="max-w-[1325px] mx-auto">
+      <div className="mx-auto">
         <div className="flex justify-center">
-          <img src={footerLogo} alt="logo" className="w-[134px] h-[88px]" />
+          <Link to={"/"}>
+            <img src={footerLogo} alt="logo" className="w-[134px] h-[88px]" />
+          </Link>
         </div>
         <div className="flex w-full mt-[48px] justify-between">
-          <div className="flex w-[30%] justify-between">
+          <div className="flex w-[32%] justify-between">
             <div>
               <h1 className="footer-header-text font-semibold">COMPANY</h1>
               <div className="text-[#ABABAB] flex flex-col gap-[10px]">
-                <Link to={"/about"} className="hover:underline"> About</Link>
-                <Link to={"/about"} className="hover:underline"> Blog</Link>
-                <Link to={"/about"} className="hover:underline"> Contact</Link>
-                <Link to={"/about"} className="hover:underline"> Jobs</Link>
+                <Link to={"/about"} className="hover:underline">
+                  {" "}
+                  About
+                </Link>
+                <Link to={"#"} className="hover:underline">
+                  {" "}
+                  Blog
+                </Link>
+                <Link to={"#"} className="hover:underline">
+                  {" "}
+                  Contact
+                </Link>
+                <Link to={"#"} className="hover:underline">
+                  {" "}
+                  Jobs
+                </Link>
               </div>
             </div>
             <div>
@@ -38,7 +52,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="w-[30%]">
+          <div className="w-[32%]">
             <h1 className="footer-header-text font-semibold">
               CONSUMER ADVISORY
             </h1>
@@ -58,7 +72,7 @@ const Footer = () => {
               </span>
             </p>
           </div>
-          <div className="w-[30%] flex">
+          <div className="w-[32%] flex">
             <div>
               <div className="w-[1px] bg-[#5D6544] h-[200px]" />
             </div>
@@ -71,10 +85,10 @@ const Footer = () => {
                 hello@sleepstiq.com
               </p>
               <div className="flex gap-[11px]">
-                <img src={facebook} alt="facebook" />
-                <img src={twitter} alt="twitter" />
-                <img src={gmail} alt="gmail" />
-                <img src={linkedin} alt="linkedin" />
+                <img src={facebook} alt="facebook" className="cursor-pointer" />
+                <img src={twitter} alt="twitter" className="cursor-pointer" />
+                <img src={gmail} alt="gmail" className="cursor-pointer" />
+                <img src={linkedin} alt="linkedin" className="cursor-pointer" />
               </div>
               <p className="mt-[55px] text-[#ABABAB] text-[14px]">
                 © 2020@sleepstiq. All Rights Reserved.

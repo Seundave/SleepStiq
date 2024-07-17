@@ -1,4 +1,5 @@
 import { profile } from "../assets/Home";
+import { productFour, productOne, productThree, productTwo } from "../assets/Products";
 
 const navData = [
   {
@@ -35,8 +36,8 @@ const Testimonial = [
   {
     id: 2,
     image: profile,
-    name: "Mrs. Adedusi ",
-    role: "Auditor",
+    name: "James Miller",
+    role: "CEO, Techbias",
     testimony:
       "I’m a very anxious person but use this and feel so relaxed and sleep way better now with the aid of sleepstiq. ",
   },
@@ -175,6 +176,37 @@ const AllReviews = [
   },
 ];
 
+const prodReview = [
+  {
+    id: 1,
+    image:productOne,
+    review:
+      "Works great! Just use it and then relax, I fall asleep with no problem every time I use it.",
+    reviewer: "Rachel Dill",
+  },
+  {
+    id: 2,
+    image:productTwo,
+    review:
+      "It really helps me fall right to sleep compared to melatonin pills.",
+    reviewer: "Javier Mendez",
+  },
+  {
+    id: 3,
+    image:productThree,
+    review:
+      "I've tried a lot of things to sleep but none of those worked, so I tried Cloudy and wow! I sleep like a baby now.",
+    reviewer: "Naomi Nwazurike",
+  },
+  {
+    id: 4,
+    image:productFour,
+    review:
+      "I have been falling asleep faster and sleeping thru the night.",
+    reviewer: "Nate Jacobs",
+  },
+]
+
 export {
   navData,
   Testimonial,
@@ -183,4 +215,5 @@ export {
   FaqCategory,
   FaqData,
   AllReviews,
+  prodReview
 };

@@ -13,3 +13,4 @@ export { default as facebook } from "./Group 48.png";
 export { default as twitter } from "./Group 47.png";
 export { default as gmail } from "./Group 46.png";
 export { default as linkedin } from "./Group 45.png";
+export { default as rating } from "./Group 18.png";

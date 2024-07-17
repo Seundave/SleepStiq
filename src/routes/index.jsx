@@ -4,7 +4,6 @@ import Layout from "../layout";
 import About from "../pages/About/index";
 import Shop from "../pages/Shop";
 import Faqs from "../pages/Faqs/index";
-import NoPageLayout from "../layout/NoPage";
 
 const Router = () => {
   return (
@@ -17,7 +16,6 @@ const Router = () => {
             <Route path="/shop" element={<Shop />} />
             <Route path="/faqs" element={<Faqs />} />
           </Route>
-          <Route path="*" element={<NoPageLayout />} />
         </Routes>
       </BrowserRouter>
     </div>

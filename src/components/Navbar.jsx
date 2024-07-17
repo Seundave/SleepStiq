@@ -7,7 +7,7 @@ import { navData } from "../constants/data";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between container py-[23px]">
+    <div className="flex justify-between container py-[23px] absolute pl-[162px] top-0 z-[1000]">
       <div className="w-[11%]">
         <Link to={"/"}>
           <img src={logo} alt="logo" className="w-[92px] h-[62px]" />
@@ -21,7 +21,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? "text-[#12305B] font-bold text-[18px]"
-                : "text-black transition duration-300 hover:font-bold text-[18px]"
+                : "text-[#12305B] transition duration-300 hover:font-bold text-[18px]"
             }
           >
             {el.page}
