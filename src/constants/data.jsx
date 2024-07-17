@@ -200,7 +200,7 @@ const prodReview = [
   },
   {
     id: 4,
-    image:productFour,
+    image:productOne,
     review:
       "I have been falling asleep faster and sleeping thru the night.",
     reviewer: "Nate Jacobs",

@@ -63,12 +63,14 @@ const SliderContent = ({ testimonialBy }) => {
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-sm:w-[100%] shadow-lg bg-[#FBF9F2] h-[474px] lg:w-[100%] flex flex-col items-center pt-[55px] px-[40px] justify-center"
+                  className="max-sm:w-[100%] shadow-lg bg-[#FBF9F2] h-auto md:h-[474px] lg:w-[100%] flex flex-col items-center md:pt-[55px] p-[20px] md:px-[40px] justify-center"
                 >
                   <div>
-                    <p className="text-[24px] text-justify italic leading-[40px]">{item.testimony}</p>
+                    <p className="md:text-[24px] max-md:text-[16px] text-justify italic lg:leading-[40px]">
+                      {item.testimony}
+                    </p>
                   </div>
-                  <div className="flex w-full items-center gap-[35px] mt-[40px] md:mt-[106px]">
+                  <div className="flex w-full items-center lg:gap-[35px] lg:mt-[25px] xl:mt-[106px]">
                     <div className="w-[120px] h-[120px] rounded-full p-[20px] justify-center items-center flex">
                       <img
                         src={item.image}
@@ -78,37 +80,32 @@ const SliderContent = ({ testimonialBy }) => {
                     </div>
                     <div>
                       <div>
-                        <p className="text-center text-[22px] text-[#4D533C] font-bold">
+                        <p className="text-center text-[16px] md:text-[22px] text-[#4D533C] font-bold">
                           {item.name}
                         </p>
-                        <p className="text-center text-[#152934] text-[16px]">{item.role}</p>
+                        <p className="text-center text-[#152934] text-[12px] md:text-[16px]">
+                          {item.role}
+                        </p>
                       </div>
                     </div>
                   </div>
-                
                 </div>
               ))}
-              
             </div>
-            
           ))}
         </div>
         <div className="absolute top-[90%]  left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {groupedTestimonials.map((_, index) => (
-          <button
-            key={index}
-            className={`h-2 w-2 rounded-full bg-gray-500 ${
-              currentIndex === index ? "bg-[#12305B]" : ""
-            }`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
+          {groupedTestimonials.map((_, index) => (
+            <button
+              key={index}
+              className={`h-2 w-2 rounded-full bg-gray-500 ${
+                currentIndex === index ? "bg-[#12305B]" : ""
+              }`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
       </div>
-      </div>
-
-  
-
-     
     </div>
   );
 };

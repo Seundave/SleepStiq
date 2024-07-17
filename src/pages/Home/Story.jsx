@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 const Story = () => {
   return (
-    <div className="px-[30px] md:px-[154px] md:flex md:flex-row flex flex-col justify-between items-center mt-[150px] mb-[152px] h-[474px]">
-      <div className="md:w-[45%] w-full">
-        <p className="text-[14px] text-[#12305B]">Our Amazing Story</p>
-        <p className="mt-[29px] mb-[56px] header-text">10k+Happy Customers</p>
-        <p className="paragraph-text mb-[29px]">
+    <div className="max-lg:px-[30px] lg:px-[154px] md:flex md:flex-row flex flex-col justify-between items-center mt-[150px] mb-[152px] h-[474px]">
+      <div className="md:w-[45%] w-full flex flex-col items-center md:items-start">
+        <p className="md:text-[14px] text-[12px] text-[#12305B]">Our Amazing Story</p>
+        <p className="md:mt-[29px] mt-[20px] md:mb-[56px] mb-[30px] header-text">10k+Happy Customers</p>
+        <p className="paragraph-text mb-[29px] text-center md:text-start">
           There’s no secret sauce, no wizard behind the curtain. What makes
           Aerolab tick is an interdisciplinary team with a framework that
           fosters candid collaboration.

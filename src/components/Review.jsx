@@ -50,7 +50,7 @@ const ReviewContent = ({ testimonialBy }) => {
     <div className="relative h-full">
       <div className="overflow-hidden h-auto">
         <div
-          className="flex transition-transform duration-300 ease-in-out  w-full justify-between  mt-[20px]"
+          className="flex transition-transform duration-300 ease-in-out  w-full justify-between  md:mt-[20px]"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
@@ -58,19 +58,19 @@ const ReviewContent = ({ testimonialBy }) => {
           {groupedTestimonials.map((group, index) => (
             <div
               key={index}
-              className="flex w-full flex-shrink-0 max-sm:justify-center mx-[30px] md:pl-[154px] md:justify-between gap-5 overflow-hidden"
+              className="flex w-full flex-shrink-0 max-sm:justify-center px-[30px] lg:mx-[30px]  lg:pl-[154px] md:justify-between gap-5 overflow-hidden"
               style={{ width: "100%" }}
             >
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-md:w-[100%] rounded-md justify-between bg-[#FBF9F2] lg:w-[45%] flex flex-col gap-5 py-[20px] px-[30px]"
+                  className="max-md:w-[100%] rounded-md justify-between bg-[#FBF9F2] lg:w-[45%] flex flex-col md:gap-5 py-[20px] px-[30px]"
                 >
-                 <div className="max-h-[78px]">
-                    <p className="text-[16px] text-justify text-[#4D533C] italic">{item.review}</p>
+                 <div className="h-auto">
+                    <p className="md:text-[16px] text-[14px] text-justify text-[#4D533C] italic">{item.review}</p>
                   </div>
-                  <div className="mb-[9px]">
-                    <p className="text-[16px] text-[#4D533C] font-bold">
+                  <div className="mb-[9px] mt-[15px] md:mt-0">
+                    <p className="md:text-[16px] text-[14px] text-[#4D533C] font-bold">
                       {item.reviewer}
                     </p>
                     <img src={rating} alt="rating" />
@@ -89,7 +89,7 @@ const ReviewContent = ({ testimonialBy }) => {
           <button
             key={index}
             className={`h-2 w-2 rounded-full bg-gray-500 ${
-              currentIndex === index ? "bg-green-500" : ""
+              currentIndex === index ? "bg-[#12305B]" : ""
             }`}
             onClick={() => goToSlide(index)}
           />

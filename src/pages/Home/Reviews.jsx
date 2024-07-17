@@ -6,7 +6,7 @@ const Reviews = () => {
   return (
     <div>
       <ReviewContent testimonialBy={AllReviews} />
-      <div className="container mb-[66px] mx-[165px]">
+      <div className="container mb-[66px] px-[30px] md:px-0 md:mx-[165px]">
         <hr className="mt-[64px] border-1 border-[#213842] border-opacity-[9.56%]" />
       </div>
     </div>

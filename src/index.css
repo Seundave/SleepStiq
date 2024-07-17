@@ -7,11 +7,11 @@
     @apply max-w-[1109px] mx-auto items-center;
   }
   .paragraph-text {
-    @apply text-[16px] text-[#213842] opacity-60;
+    @apply md:text-[16px] text-[14px] text-[#213842] opacity-60;
   }
 
   .header-text {
-    @apply text-[36px] text-[#12305B] font-bold;
+    @apply text-[20px] md:text-[36px] text-[#12305B] font-bold;
   }
 
   .footer-header-text {

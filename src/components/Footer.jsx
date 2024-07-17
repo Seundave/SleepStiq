@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div
-      className="px-[58px] bg-[#043C50] py-[35px]"
+      className="md:px-[58px] px-[30px] bg-[#043C50] py-[35px]"
       style={{
         backgroundImage: "url(/Object.png)",
         backgroundSize: "cover",
@@ -16,47 +16,67 @@ const Footer = () => {
       <div className="mx-auto">
         <div className="flex justify-center">
           <Link to={"/"}>
-            <img src={footerLogo} alt="logo" className="w-[134px] h-[88px]" />
+            <img
+              src={footerLogo}
+              alt="logo"
+              className="md:w-[134px] md:h-[88px] w-[88px] h-[60px]"
+            />
           </Link>
         </div>
-        <div className="flex w-full mt-[48px] justify-between">
-          <div className="flex w-[32%] justify-between">
-            <div>
+        <div className="lg:flex lg:flex-row flex flex-col w-full mt-[48px] justify-between">
+          <div className="flex xl:w-[32%] w-full justify-between gap-7 md:gap-0">
+            <div className="w-[50%]">
               <h1 className="footer-header-text font-semibold">COMPANY</h1>
               <div className="text-[#ABABAB] flex flex-col gap-[10px]">
-                <Link to={"/about"} className="hover:underline">
+                <Link
+                  to={"/about"}
+                  className="hover:underline md:text-[16px] text-[14px] "
+                >
                   {" "}
                   About
                 </Link>
-                <Link to={"#"} className="hover:underline">
+                <Link
+                  to={"#"}
+                  className="hover:underline md:text-[16px] text-[14px]"
+                >
                   {" "}
                   Blog
                 </Link>
-                <Link to={"#"} className="hover:underline">
+                <Link
+                  to={"#"}
+                  className="hover:underline md:text-[16px] text-[14px]"
+                >
                   {" "}
                   Contact
                 </Link>
-                <Link to={"#"} className="hover:underline">
+                <Link
+                  to={"#"}
+                  className="hover:underline md:text-[16px] text-[14px]"
+                >
                   {" "}
                   Jobs
                 </Link>
               </div>
             </div>
-            <div>
+            <div className="w-[50%]">
               <h1 className="footer-header-text font-semibold">CONTACT</h1>
-              <p className="text-[#ABABAB]">Phone</p>
-              <p className="text-white my-[10px]">+234 708 507 3128</p>
-              <p className="text-[#ABABAB]">Address</p>
-              <p className="text-white mt-[10px]">
+              <p className="text-[#ABABAB] md:text-[16px] text-[14px]">Phone</p>
+              <p className="text-white my-[10px] md:text-[16px] text-[14px]">
+                +234 708 507 3128
+              </p>
+              <p className="text-[#ABABAB] md:text-[16px] text-[14px]">
+                Address
+              </p>
+              <p className="text-white mt-[10px] md:text-[16px] text-[14px]">
                 16, Ogindipe Close, Upston Close
               </p>
             </div>
           </div>
-          <div className="w-[32%]">
+          <div className="xl:w-[32%] w-full mt-4 lg:mt-0">
             <h1 className="footer-header-text font-semibold">
               CONSUMER ADVISORY
             </h1>
-            <p className="text-[16px] text-white max-w-[463px]">
+            <p className="md:text-[16px] text-[14px] text-white">
               These statements have not been evaluated by the Food and Drug
               Administration. This product is not intended to diagnose, treat,
               cure, or prevent any disease. This product should be used only as
@@ -72,16 +92,21 @@ const Footer = () => {
               </span>
             </p>
           </div>
-          <div className="w-[32%] flex">
-            <div>
+          <div className="xl:w-[32%] md:flex md:flex-row flex flex-col w-full">
+            <div className="hidden lg:block">
               <div className="w-[1px] bg-[#5D6544] h-[200px]" />
             </div>
-            <div className="ml-[55px]">
-              <h1 className="footer-header-text font-semibold">Get in Touch</h1>
-              <p className="text-[#ABABAB] text-[16px] mt-[23px]">
+            <div className="block lg:hidden">
+              <div className="w-full bg-[#5D6544] h-[1px] mt-6" />
+            </div>
+            <div className="lg:ml-[55px]">
+              <h1 className="footer-header-text font-semibold mt-4 lg:mt-0">
+                Get in Touch
+              </h1>
+              <p className="text-[#ABABAB] md:text-[16px] text-[14px] mt-[23px]">
                 Feel free to get in touch with us vai email
               </p>
-              <p className="text-[24px] my-[23px] text-white">
+              <p className="md:text-[24px] text-[16px] my-[23px] text-white">
                 hello@sleepstiq.com
               </p>
               <div className="flex gap-[11px]">

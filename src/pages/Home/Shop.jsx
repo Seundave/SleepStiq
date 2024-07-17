@@ -8,9 +8,9 @@ const Shop = () => {
       <div className="w-full md:w-[62%] flex justify-end max-h-[580px] ">
         <img src={shopImage} alt="" className=" h-full placeholder:shadow-2xl" />
       </div>
-      <div className="w-full md:w-[38%] px-[30px] md:mx-0">
+      <div className="w-full md:w-[38%] px-[30px] md:mx-0 flex flex-col md:items-start items-center">
         <h2 className="header-text">Shop Now</h2>
-        <p className="paragraph-text mt-[27px] mb-[20px]">
+        <p className="paragraph-text mt-[18px] md:mt-[27px] mb-[16px] md:mb-[20px] text-center md:text-start">
           Our Personal Diffuser is an aromatherapy device that contains a blend
           of melatonin, lavender, and chamomile. A few breaths of our
           plant-based essential oil mist will mellow you out, quiet the mind,
