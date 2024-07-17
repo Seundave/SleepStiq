@@ -6,7 +6,6 @@ const ProductReview = ({ review }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
-
   // handles responsiveness
   useEffect(() => {
     const handleResize = () => {
@@ -29,13 +28,15 @@ const ProductReview = ({ review }) => {
     groupedReview.push(review.slice(i, i + itemsPerGroup));
   }
 
+  console.log(itemsPerGroup);
+
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
 
   return (
     <div className="relative h-full">
-      <div className="overflow-hidden h-auto">
+      <div>
         <div
           className="flex transition-transform duration-300 ease-in-out w-full justify-between"
           style={{
@@ -45,16 +46,20 @@ const ProductReview = ({ review }) => {
           {groupedReview.map((group, index) => (
             <div
               key={index}
-              className="flex w-full flex-shrink-0 max-sm:justify-center md:justify-between gap-[53px] overflow-hidden h-[420px]"
+              className="flex w-full  max-sm:justify-center gap-[53px] overflow-x-hidden pb-[225px]"
               style={{ width: "100%" }}
             >
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-sm:w-[100%] shadow-2xl rounded-md bg-white lg:w-[45%] flex flex-col gap-5"
+                  className="max-sm:w-[100%] shadow-2xl rounded-md bg-white lg:w-[45%]  flex flex-col gap-5"
                 >
                   <div className="h-[210px]">
-                    <img src={item.image} alt="image" className="w-full h-full" />
+                    <img
+                      src={item.image}
+                      alt="image"
+                      className="w-full h-full"
+                    />
                   </div>
                   <div className="flex flex-col justify-between mt-[16px]">
                     <div className="h-auto px-[15px] md:px-[30px]">
@@ -74,11 +79,13 @@ const ProductReview = ({ review }) => {
             </div>
           ))}
         </div>
-        <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-[20%] left-1/2 transform -translate-x-1/2 flex space-x-2">
           {groupedReview.map((_, index) => (
             <button
               key={index}
-              className={`h-2 w-2 rounded-full ${currentIndex === index ? "bg-[#12305B]" : "bg-gray-500"}`}
+              className={`h-2 w-2 rounded-full ${
+                currentIndex === index ? "bg-[#12305B]" : "bg-gray-500"
+              }`}
               style={{
                 backgroundColor: currentIndex === index ? "#12305B" : "gray",
               }}

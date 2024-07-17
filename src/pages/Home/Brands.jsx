@@ -9,7 +9,7 @@ import {
 
 const Brands = () => {
   return (
-    <div className="h-[80px] md:h-[131px]  w-full flex items-center bg-white shadow-2xl gap-[20px] md:gap-[50px] px-[20px] md:pl-[72px] md:pr-[82px]">
+    <div className="h-[80px] md:h-[131px] justify-between  w-full flex items-center bg-white shadow-2xl gap-[20px] md:gap-[50px] px-[20px] md:pl-[72px] md:pr-[82px]">
       <ImageBox width="w-[146px]" image={google} />
       <ImageBox width="w-[129px]" image={forbes} />
       <ImageBox width="w-[226px]" image={bloomberg} />
