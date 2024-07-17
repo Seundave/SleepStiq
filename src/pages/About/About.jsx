@@ -9,7 +9,11 @@ const About = () => {
     <div>
       <div className="md:flex md:flex-row flex flex-col mx-[30px] lg:mx-[152px] gap-[30px] md:gap-[203px] items-center mt-[73px]">
         <div className="md:w-[48%] w-full">
-          <img src={aboutImageTwo} alt="" className="w-full h-full" />
+          <img
+            src={aboutImageTwo}
+            alt="about-image"
+            className="w-full h-full"
+          />
         </div>
         <div className="md:w-[52%] w-full">
           <h1 className="header-text md:text-start text-center">
@@ -22,7 +26,7 @@ const About = () => {
             and lull you to bed.
           </p>
           {AboutSleepStiq.map((el, index) => (
-            <p className="text-[#4D533C] md:text[-[16px] text-[14px] italic">
+            <p className="text-[#4D533C] md:text[-[16px] text-[14px] italic" key={index}>
               {el.about}
             </p>
           ))}

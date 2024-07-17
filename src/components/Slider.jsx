@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-// import { Testimonial } from "../pages/Home/data";
 
 const SliderContent = ({ testimonialBy }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
+  // handles responsiveness
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -26,20 +26,6 @@ const SliderContent = ({ testimonialBy }) => {
   for (let i = 0; i < testimonialBy.length; i += itemsPerGroup) {
     groupedTestimonials.push(testimonialBy.slice(i, i + itemsPerGroup));
   }
-
-  const nextSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex + 1) % groupedTestimonials.length
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + groupedTestimonials.length) %
-        groupedTestimonials.length
-    );
-  };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
@@ -63,18 +49,18 @@ const SliderContent = ({ testimonialBy }) => {
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-sm:w-[100%] shadow-lg bg-[#FBF9F2] h-auto md:h-[474px] lg:w-[100%] flex flex-col items-center md:pt-[55px] p-[20px] md:px-[40px] justify-center"
+                  className="max-sm:w-[100%] shadow-lg bg-[#FBF9F2] h-auto md:h-[474px] lg:w-[100%] flex flex-col items-center xl:pt-[55px] p-[20px] md:px-[40px] justify-center"
                 >
                   <div>
                     <p className="md:text-[24px] max-md:text-[16px] text-justify italic lg:leading-[40px]">
                       {item.testimony}
                     </p>
                   </div>
-                  <div className="flex w-full items-center lg:gap-[35px] lg:mt-[25px] xl:mt-[106px]">
+                  <div className="flex w-full items-center xl:gap-[35px]  xl:mt-[90px]">
                     <div className="w-[120px] h-[120px] rounded-full p-[20px] justify-center items-center flex">
                       <img
                         src={item.image}
-                        alt=""
+                        alt="image"
                         className="w-[110px] h-[80px] rounded-full object-cover"
                       />
                     </div>
@@ -94,13 +80,14 @@ const SliderContent = ({ testimonialBy }) => {
             </div>
           ))}
         </div>
-        <div className="absolute top-[90%]  left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute top-[90%] left-1/2 transform -translate-x-1/2 flex space-x-2">
           {groupedTestimonials.map((_, index) => (
             <button
               key={index}
-              className={`h-2 w-2 rounded-full bg-gray-500 ${
-                currentIndex === index ? "bg-[#12305B]" : ""
-              }`}
+              className={`h-2 w-2 rounded-full ${currentIndex === index ? "bg-[#12305B]" : "bg-gray-500"}`}
+              style={{
+                backgroundColor: currentIndex === index ? "#12305B" : "gray",
+              }}
               onClick={() => goToSlide(index)}
             />
           ))}

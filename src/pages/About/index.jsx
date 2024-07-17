@@ -8,7 +8,6 @@ const index = () => {
     <div>
       <Hero />
       <About />
-      <Footer />
     </div>
   );
 };

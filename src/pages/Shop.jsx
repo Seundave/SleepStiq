@@ -1,16 +1,12 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import NoPage from './NoPage'
-import Footer from '../components/Footer'
+import React from "react";
+import NoPage from "./NoPage";
 
 const Shop = () => {
   return (
     <div>
-      {/* <Navbar/> */}
-      <NoPage/>
-      <Footer/>
+      <NoPage />
     </div>
-  )
-}
+  );
+};
 
-export default Shop
+export default Shop;

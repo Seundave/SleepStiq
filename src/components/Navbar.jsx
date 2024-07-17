@@ -3,6 +3,7 @@ import { logo } from "../assets/Home";
 import { Link, NavLink } from "react-router-dom";
 import { navData } from "../constants/data";
 import { MdCancel } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
 
 // Navigation bar
 const Navbar = () => {
@@ -11,10 +12,12 @@ const Navbar = () => {
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
+    document.body.style.overflow = showDropdown ? "auto" : "hidden";
   };
 
   const closeDropdown = () => {
     setShowDropdown(false);
+    document.body.style.overflow = "auto";
   };
 
   useEffect(() => {
@@ -31,23 +34,17 @@ const Navbar = () => {
           <div className="w-[90px] h-[50px]">
             <img
               src={logo}
-              alt="Tees bridal"
+              alt="logo"
               className="h-full w-full object-contain"
             />
           </div>
         </Link>
         <button onClick={toggleDropdown}>
-          <svg
-            className="h-6 w-6 fill-current"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"
-            />
-          </svg>
+          {showDropdown ? (
+            <MdCancel className="h-6 w-6 fill-current" />
+          ) : (
+            <FiMenu className="h-6 w-6 fill-current" />
+          )}
         </button>
       </div>
 

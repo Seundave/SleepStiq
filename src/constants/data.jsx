@@ -1,5 +1,5 @@
 import { profile } from "../assets/Home";
-import { productFour, productOne, productThree, productTwo } from "../assets/Products";
+import { productOne, productThree, productTwo } from "../assets/Products";
 
 const navData = [
   {
@@ -179,33 +179,32 @@ const AllReviews = [
 const prodReview = [
   {
     id: 1,
-    image:productOne,
+    image: productOne,
     review:
       "Works great! Just use it and then relax, I fall asleep with no problem every time I use it.",
     reviewer: "Rachel Dill",
   },
   {
     id: 2,
-    image:productTwo,
+    image: productTwo,
     review:
       "It really helps me fall right to sleep compared to melatonin pills.",
     reviewer: "Javier Mendez",
   },
   {
     id: 3,
-    image:productThree,
+    image: productThree,
     review:
       "I've tried a lot of things to sleep but none of those worked, so I tried Cloudy and wow! I sleep like a baby now.",
     reviewer: "Naomi Nwazurike",
   },
   {
     id: 4,
-    image:productOne,
-    review:
-      "I have been falling asleep faster and sleeping thru the night.",
+    image: productOne,
+    review: "I have been falling asleep faster and sleeping thru the night.",
     reviewer: "Nate Jacobs",
   },
-]
+];
 
 export {
   navData,
@@ -215,5 +214,5 @@ export {
   FaqCategory,
   FaqData,
   AllReviews,
-  prodReview
+  prodReview,
 };

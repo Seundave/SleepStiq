@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 import PrimaryButton from "../../reusables/PrimaryButton";
 import Brands from "./Brands";
 
@@ -13,7 +12,6 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* <Navbar /> */}
       <div>
         <p className="md:text-[18px] text-[14px] text-[#12305B]">
           We're here to help you

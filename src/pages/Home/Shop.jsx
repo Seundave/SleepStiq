@@ -6,7 +6,7 @@ const Shop = () => {
   return (
     <div className="md:flex md:flex-row flex flex-col md:pr-[187px] md:gap-[56px] items-center justify-center">
       <div className="w-full md:w-[62%] flex justify-end max-h-[580px] ">
-        <img src={shopImage} alt="" className=" h-full placeholder:shadow-2xl" />
+        <img src={shopImage} alt="shop-image" className=" h-full placeholder:shadow-2xl" />
       </div>
       <div className="w-full md:w-[38%] px-[30px] md:mx-0 flex flex-col md:items-start items-center">
         <h2 className="header-text">Shop Now</h2>

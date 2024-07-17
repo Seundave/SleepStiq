@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 
 const Hero = () => {
   return (
@@ -11,7 +10,6 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* <Navbar /> */}
       <div className="lg:ml-[162px] mx-[30px]">
         <p className="md:text-[18px] text-[14px] text-[#12305B]">We're here to help you</p>
         <h1 className="md:text-[60px] text-[30px] font-bold text-[#12305B]">Relax & Rest</h1>

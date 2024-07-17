@@ -12,7 +12,7 @@ const VisitShop = () => {
         bed.
       </p>
       <PrimaryButton text={"Visit Shop"} />
-      <div className="container">
+      <div className="container max-lg:px-[30px] xl:mx-[165px]">
         <hr className="md:mt-[165px] mt-[40px] border-1 border-[#213842] border-opacity-[9.56%]" />
       </div>
     </div>

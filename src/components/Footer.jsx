@@ -10,7 +10,6 @@ const Footer = () => {
         backgroundImage: "url(/Object.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        // height: "100vh",
       }}
     >
       <div className="mx-auto">
@@ -94,7 +93,7 @@ const Footer = () => {
           </div>
           <div className="xl:w-[32%] md:flex md:flex-row flex flex-col w-full">
             <div className="hidden lg:block">
-              <div className="w-[1px] bg-[#5D6544] h-[200px]" />
+              <div className="w-[1px] bg-[#5D6544] h-[200px] lg:ml-[20px]" />
             </div>
             <div className="block lg:hidden">
               <div className="w-full bg-[#5D6544] h-[1px] mt-6" />

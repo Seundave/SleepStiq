@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrimaryButton = ({ text, mt }) => {
+const PrimaryButton = ({ text }) => {
   return (
     <div>
       <button
