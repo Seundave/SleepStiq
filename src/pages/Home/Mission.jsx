@@ -4,7 +4,7 @@ import { Missions } from "../../constants/data";
 
 const Mission = () => {
   return (
-    <div className="md:flex md:flex-row flex flex-col md:mt-[165px] mt-[50px]  lg:mx-0 px-[30px] max-lg:px-[30px]  md:gap-[58px] lg:ml-[172px]">
+    <div className="md:flex md:flex-row flex flex-col md:mt-[165px] mt-[50px]  lg:mx-0 px-[30px] max-lg:px-[30px] lg:px-0  md:gap-[58px] lg:ml-[172px]">
       <div className="md:w-[37%] w-full max-w-[475px] flex flex-col justify-center">
         <h1 className="header-text text-center md:text-start">Our Mission</h1>
         <p className="paragraph-text md:mt-[28px] mt-[20px]">
