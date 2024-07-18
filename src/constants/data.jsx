@@ -1,4 +1,4 @@
-import { profile } from "../assets/Home";
+import { facebook, gmail, linkedin, profile, twitter } from "../assets/Home";
 import { productOne, productThree, productTwo } from "../assets/Products";
 
 // Contains data in the project
@@ -208,6 +208,52 @@ const prodReview = [
   },
 ];
 
+const footerLinks = [
+  {
+    id: 1,
+    title: "About",
+    link: "/about",
+  },
+  {
+    id: 2,
+    title: "Blog",
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Contact",
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "Jobs",
+    link: "#",
+  },
+];
+
+const socialIcons = [
+  {
+    id: 1,
+    icon: facebook,
+    link: "https://www.facebook.com/",
+  },
+  {
+    id: 2,
+    icon: twitter,
+    link: "https://x.com/home",
+  },
+  {
+    id: 3,
+    icon: gmail,
+    link: "https://gmail.com",
+  },
+  {
+    id: 4,
+    icon: linkedin,
+    link: "https://www.linkedin.com/",
+  },
+];
+
 export {
   navData,
   Testimonial,
@@ -217,4 +263,6 @@ export {
   FaqData,
   AllReviews,
   prodReview,
+  footerLinks,
+  socialIcons,
 };

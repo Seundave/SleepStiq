@@ -1,6 +1,7 @@
 import React from "react";
 import { facebook, footerLogo, gmail, linkedin, twitter } from "../assets/Home";
 import { Link } from "react-router-dom";
+import { footerLinks, socialIcons } from "../constants/data";
 
 const Footer = () => {
   return (
@@ -32,34 +33,16 @@ const Footer = () => {
             <div className="w-[50%]">
               <h1 className="footer-header-text font-semibold">COMPANY</h1>
               <div className="text-[#ABABAB] flex flex-col gap-[10px]">
-                <Link
-                  to={"/about"}
-                  className="hover:underline md:text-[16px] text-[14px] "
-                >
-                  {" "}
-                  About
-                </Link>
-                <Link
-                  to={"#"}
-                  className="hover:underline md:text-[16px] text-[14px]"
-                >
-                  {" "}
-                  Blog
-                </Link>
-                <Link
-                  to={"#"}
-                  className="hover:underline md:text-[16px] text-[14px]"
-                >
-                  {" "}
-                  Contact
-                </Link>
-                <Link
-                  to={"#"}
-                  className="hover:underline md:text-[16px] text-[14px]"
-                >
-                  {" "}
-                  Jobs
-                </Link>
+                {footerLinks.map((el, index) => (
+                  <Link
+                    to={el.link}
+                    key={index}
+                    className="hover:underline md:text-[16px] text-[14px] "
+                  >
+                    {" "}
+                    {el.title}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -120,27 +103,15 @@ const Footer = () => {
                 hello@sleepstiq.com
               </p>
               <div className="flex gap-[11px]">
-                <Link to={"#"}>
-                  <img
-                    src={facebook}
-                    alt="facebook"
-                    className="cursor-pointer"
-                  />
-                </Link>
-
-                <Link to={"#"}>
-                  <img src={twitter} alt="twitter" className="cursor-pointer" />
-                </Link>
-                <Link to={"#"}>
-                  <img src={gmail} alt="gmail" className="cursor-pointer" />
-                </Link>
-                <Link to={"#"}>
-                  <img
-                    src={linkedin}
-                    alt="linkedin"
-                    className="cursor-pointer"
-                  />
-                </Link>
+                {socialIcons.map((el, index) => (
+                  <Link to={el.link} key={index}>
+                    <img
+                      src={el.icon}
+                      alt="social-icons"
+                      className="cursor-pointer"
+                    />
+                  </Link>
+                ))}
               </div>
               <p className="mt-[55px] text-[#ABABAB] text-[14px]">
                 © 2020@sleepstiq. All Rights Reserved.
