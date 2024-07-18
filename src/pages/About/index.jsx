@@ -5,10 +5,10 @@ import Footer from "../../components/Footer";
 
 const index = () => {
   return (
-    <div>
+    <>
       <Hero />
       <About />
-    </div>
+    </>
   );
 };
 

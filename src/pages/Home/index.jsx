@@ -8,7 +8,7 @@ import VisitShop from "./VisitShop";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Story />
       <Reviews />
@@ -16,7 +16,7 @@ const Home = () => {
       <Mission />
       <VisitShop />
       <ProductReviews />
-    </div>
+    </>
   );
 };
 

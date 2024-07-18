@@ -7,11 +7,11 @@ import Navbar from "../components/Navbar";
 // Page layout
 const Layout = () => {
   return (
-    <div>
+    <>
       <Navbar/>
       <Outlet />
       <Footer />
-    </div>
+    </>
   );
 };
 

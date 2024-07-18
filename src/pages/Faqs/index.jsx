@@ -4,10 +4,10 @@ import Faq from './Faq'
 
 const index = () => {
   return (
-    <div>
+    <>
       <Hero/>
       <Faq/>
-    </div>
+    </>
   )
 }
 
