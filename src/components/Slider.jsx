@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 
 const SliderContent = ({ testimonialBy }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +23,7 @@ const SliderContent = ({ testimonialBy }) => {
 
   // cards shown per page
   const groupedTestimonials = [];
-  const itemsPerGroup = isMobile ? 1 : isTablet ? 1 : 1;
+  const itemsPerGroup = 1; // set to 1 for mobile, tablet, and desktop as per your original logic
 
   for (let i = 0; i < testimonialBy.length; i += itemsPerGroup) {
     groupedTestimonials.push(testimonialBy.slice(i, i + itemsPerGroup));
@@ -32,8 +33,15 @@ const SliderContent = ({ testimonialBy }) => {
     setCurrentIndex(index);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setCurrentIndex((prevIndex) => (prevIndex + 1) % groupedTestimonials.length),
+    onSwipedRight: () => setCurrentIndex((prevIndex) => (prevIndex - 1 + groupedTestimonials.length) % groupedTestimonials.length),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   return (
-    <div className="relative">
+    <div className="relative" {...handlers}>
       <div className="overflow-hidden h-auto">
         <div
           className="flex transition-transform duration-300 ease-in-out  w-full justify-between"
@@ -57,7 +65,7 @@ const SliderContent = ({ testimonialBy }) => {
                       {item.testimony}
                     </p>
                   </div>
-                  <div className="flex w-full items-center xl:gap-[35px]  xl:mt-[90px]">
+                  <div className="flex w-full items-center xl:gap-[35px] xl:mt-[90px]">
                     <div className="w-[120px] h-[120px] rounded-full p-[20px] justify-center items-center flex">
                       <img
                         src={item.image}

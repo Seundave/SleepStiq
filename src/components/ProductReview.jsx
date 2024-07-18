@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 import { rating } from "../assets/Home";
 
 const ProductReview = ({ review }) => {
@@ -33,8 +34,15 @@ const ProductReview = ({ review }) => {
     setCurrentIndex(index);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setCurrentIndex((prevIndex) => (prevIndex + 1) % groupedReview.length),
+    onSwipedRight: () => setCurrentIndex((prevIndex) => (prevIndex - 1 + groupedReview.length) % groupedReview.length),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   return (
-    <div className="relative h-full">
+    <div className="relative h-full" {...handlers}>
       <div className="overflow-hidden h-auto">
         <div
           className="flex transition-transform duration-300 ease-in-out w-full"
