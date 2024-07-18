@@ -36,9 +36,9 @@ const ProductReview = ({ review }) => {
 
   return (
     <div className="relative h-full">
-      <div>
+      <div className="overflow-hidden h-auto">
         <div
-          className="flex transition-transform duration-300 ease-in-out w-full justify-between"
+          className="flex transition-transform duration-300 ease-in-out w-full"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
@@ -46,13 +46,14 @@ const ProductReview = ({ review }) => {
           {groupedReview.map((group, index) => (
             <div
               key={index}
-              className="flex w-full  max-sm:justify-center gap-[53px] overflow-x-hidden pb-[225px]"
+              className="flex w-full flex-shrink-0 justify-between max-sm:justify-center gap-[20px] overflow-x-hidden pb-[225px]"
               style={{ width: "100%" }}
             >
               {group.map((item) => (
                 <div
                   key={item.id}
-                  className="max-sm:w-[100%] shadow-2xl rounded-md bg-white lg:w-[45%]  flex flex-col gap-5"
+                  className="flex-1 shadow-2xl rounded-md bg-white flex flex-col gap-5"
+                  style={{ maxWidth: isTablet ? "48%" : "100%" }}
                 >
                   <div className="h-[210px]">
                     <img
@@ -61,8 +62,8 @@ const ProductReview = ({ review }) => {
                       className="w-full h-full"
                     />
                   </div>
-                  <div className="flex flex-col justify-between mt-[16px]">
-                    <div className="h-auto px-[15px] md:px-[30px]">
+                  <div className="flex flex-col justify-between mt-[16px] h-full mb-[33px]">
+                    <div className="px-[15px] md:px-[30px]">
                       <p className="md:text-[16px] text-[14px] text-justify text-[#4D533C] italic">
                         {item.review}
                       </p>

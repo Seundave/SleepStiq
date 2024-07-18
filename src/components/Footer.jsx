@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div
-      className="md:px-[58px] px-[30px] bg-[#043C50] py-[35px]"
+      className="md:px-[58px] px-[30px] bg-[#112F5A] py-[35px]"
       style={{
         backgroundImage: "url(/Object.png)",
         backgroundSize: "cover",
@@ -109,10 +109,27 @@ const Footer = () => {
                 hello@sleepstiq.com
               </p>
               <div className="flex gap-[11px]">
-                <img src={facebook} alt="facebook" className="cursor-pointer" />
-                <img src={twitter} alt="twitter" className="cursor-pointer" />
-                <img src={gmail} alt="gmail" className="cursor-pointer" />
-                <img src={linkedin} alt="linkedin" className="cursor-pointer" />
+                <Link to={"#"}>
+                  <img
+                    src={facebook}
+                    alt="facebook"
+                    className="cursor-pointer"
+                  />
+                </Link>
+
+                <Link to={"#"}>
+                  <img src={twitter} alt="twitter" className="cursor-pointer" />
+                </Link>
+                <Link to={"#"}>
+                  <img src={gmail} alt="gmail" className="cursor-pointer" />
+                </Link>
+                <Link to={"#"}>
+                  <img
+                    src={linkedin}
+                    alt="linkedin"
+                    className="cursor-pointer"
+                  />
+                </Link>
               </div>
               <p className="mt-[55px] text-[#ABABAB] text-[14px]">
                 © 2020@sleepstiq. All Rights Reserved.

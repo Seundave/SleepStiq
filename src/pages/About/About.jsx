@@ -33,7 +33,7 @@ const About = () => {
           <div className="flex justify-between mt-[18px] w-[172px]">
             <div className="w-[56px] flex flex-col gap-[6px]">
               <p className="md:text-[16px] text-[14px]">Price</p>
-              <p className="font-semibold md:text-[16px] text-[14px]">USD 50</p>
+              <p className="font-semibold text-[14px]">USD 50</p>
             </div>
             <div className="w-[63px] flex flex-col gap-[6px]">
               <p className="md:text-[16px] text-[14px]">Unit</p>
