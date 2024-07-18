@@ -5,14 +5,18 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div
-      className="md:px-[58px] px-[30px] bg-[#112F5A] py-[35px]"
+      className="md:px-[58px] px-[30px] py-[35px]"
       style={{
-        backgroundImage: "url(/Object.png)",
+        backgroundImage:
+          "url(/Object.png), linear-gradient(to bottom, rgba(17,47,90,0.8), rgba(17,47,90,0.8))",
+        backgroundBlendMode: "overlay",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundColor: "#112F5A",
       }}
     >
       <div className="mx-auto">
+        {/* Footer image container */}
         <div className="flex justify-center">
           <Link to={"/"}>
             <img
@@ -24,6 +28,7 @@ const Footer = () => {
         </div>
         <div className="lg:flex lg:flex-row flex flex-col w-full mt-[48px] justify-between">
           <div className="flex xl:w-[32%] w-full justify-between gap-7 md:gap-0">
+            {/* Company details */}
             <div className="w-[50%]">
               <h1 className="footer-header-text font-semibold">COMPANY</h1>
               <div className="text-[#ABABAB] flex flex-col gap-[10px]">
@@ -57,6 +62,8 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
+
+            {/* Contact details */}
             <div className="w-[50%]">
               <h1 className="footer-header-text font-semibold">CONTACT</h1>
               <p className="text-[#ABABAB] md:text-[16px] text-[14px]">Phone</p>
@@ -71,6 +78,8 @@ const Footer = () => {
               </p>
             </div>
           </div>
+
+          {/* Consumer advisory */}
           <div className="xl:w-[32%] w-full mt-4 lg:mt-0">
             <h1 className="footer-header-text font-semibold">
               CONSUMER ADVISORY
@@ -91,6 +100,8 @@ const Footer = () => {
               </span>
             </p>
           </div>
+
+          {/* Get in touch */}
           <div className="xl:w-[32%] md:flex md:flex-row flex flex-col w-full">
             <div className="hidden lg:block">
               <div className="w-[1px] bg-[#5D6544] h-[200px] lg:ml-[20px]" />

@@ -1,6 +1,8 @@
 import { profile } from "../assets/Home";
 import { productOne, productThree, productTwo } from "../assets/Products";
 
+// Contains data in the project
+
 const navData = [
   {
     id: 1,

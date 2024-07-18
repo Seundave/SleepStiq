@@ -35,12 +35,15 @@ const Faq = () => {
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleItem(item.id)}
             >
+              {/* Faq Questions */}
               <div className="w-[100%] border-t border-[#BDBDBD]">
                 <h3 className="md:text-[16px] text-[10px] text-[#12305B] font-semibold my-[20px]">
                   {item.question}
                 </h3>
               </div>
             </div>
+
+            {/* Faq answers */}
             {expandedItem === item.id && (
               <div>
                 <p className="md:text-[16px] text-[10px] text-black mb-[20px]">

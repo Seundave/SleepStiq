@@ -21,14 +21,13 @@ const ProductReview = ({ review }) => {
     };
   }, []);
 
+  // cards shown per page
   const groupedReview = [];
   const itemsPerGroup = isMobile ? 1 : isTablet ? 2 : 4;
 
   for (let i = 0; i < review.length; i += itemsPerGroup) {
     groupedReview.push(review.slice(i, i + itemsPerGroup));
   }
-
-  console.log(itemsPerGroup);
 
   const goToSlide = (index) => {
     setCurrentIndex(index);

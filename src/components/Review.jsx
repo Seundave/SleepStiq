@@ -21,6 +21,7 @@ const ReviewContent = ({ testimonialBy }) => {
     };
   }, []);
 
+  // cards shown per page
   const groupedTestimonials = [];
   const itemsPerGroup = isMobile ? 1 : isTablet ? 2 : 4;
 

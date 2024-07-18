@@ -20,6 +20,7 @@ const SliderContent = ({ testimonialBy }) => {
     };
   }, []);
 
+  // cards shown per page
   const groupedTestimonials = [];
   const itemsPerGroup = isMobile ? 1 : isTablet ? 1 : 1;
 

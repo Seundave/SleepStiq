@@ -8,6 +8,7 @@ const About = () => {
   return (
     <div>
       <div className="md:flex md:flex-row flex flex-col mx-[30px] lg:mx-[152px] gap-[30px] md:gap-[203px] items-center mt-[73px]">
+        {/* product image container */}
         <div className="md:w-[48%] w-full">
           <img
             src={aboutImageTwo}
@@ -15,6 +16,8 @@ const About = () => {
             className="w-full h-full"
           />
         </div>
+
+        {/* About product page content */}
         <div className="md:w-[52%] w-full">
           <h1 className="header-text md:text-start text-center">
             About Product
@@ -26,7 +29,10 @@ const About = () => {
             and lull you to bed.
           </p>
           {AboutSleepStiq.map((el, index) => (
-            <p className="text-[#4D533C] md:text[-[16px] text-[14px] italic" key={index}>
+            <p
+              className="text-[#4D533C] md:text[-[16px] text-[14px] italic"
+              key={index}
+            >
               {el.about}
             </p>
           ))}
@@ -47,6 +53,8 @@ const About = () => {
           <PrimaryButton text={"Buy"} />
         </div>
       </div>
+
+      {/* Divider */}
       <div className="container md:mb-[66px] mb-[30px] px-[30px] md:px-0">
         <hr className="md:mt-[165px] mt-[30px] border-1 border-[#213842] border-opacity-[9.56%]" />
       </div>

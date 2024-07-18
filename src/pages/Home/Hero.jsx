@@ -25,6 +25,7 @@ const Hero = () => {
         </p>
         <PrimaryButton text="Visit Shop" />
       </div>
+      {/* Brands */}
       <div className="absolute bottom-[-66px] w-full right-0 flex justify-end md:pl-[154px]">
         <Brands />
       </div>
