@@ -35,8 +35,16 @@ const ReviewContent = ({ testimonialBy }) => {
   };
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => setCurrentIndex((prevIndex) => (prevIndex + 1) % groupedTestimonials.length),
-    onSwipedRight: () => setCurrentIndex((prevIndex) => (prevIndex - 1 + groupedTestimonials.length) % groupedTestimonials.length),
+    onSwipedLeft: () =>
+      setCurrentIndex(
+        (prevIndex) => (prevIndex + 1) % groupedTestimonials.length
+      ),
+    onSwipedRight: () =>
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex - 1 + groupedTestimonials.length) %
+          groupedTestimonials.length
+      ),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
@@ -81,7 +89,9 @@ const ReviewContent = ({ testimonialBy }) => {
           {groupedTestimonials.map((_, index) => (
             <button
               key={index}
-              className={`h-2 w-2 rounded-full ${currentIndex === index ? "bg-[#12305B]" : "bg-gray-500"}`}
+              className={`h-2 w-2 rounded-full ${
+                currentIndex === index ? "bg-[#12305B]" : "bg-gray-500"
+              }`}
               style={{
                 backgroundColor: currentIndex === index ? "#12305B" : "gray",
               }}

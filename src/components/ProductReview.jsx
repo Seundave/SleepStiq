@@ -35,10 +35,15 @@ const ProductReview = ({ review }) => {
   };
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => setCurrentIndex((prevIndex) => (prevIndex + 1) % groupedReview.length),
-    onSwipedRight: () => setCurrentIndex((prevIndex) => (prevIndex - 1 + groupedReview.length) % groupedReview.length),
+    onSwipedLeft: () =>
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % groupedReview.length),
+    onSwipedRight: () =>
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex - 1 + groupedReview.length) % groupedReview.length
+      ),
     preventDefaultTouchmoveEvent: true,
-    trackMouse: true
+    trackMouse: true,
   });
 
   return (
