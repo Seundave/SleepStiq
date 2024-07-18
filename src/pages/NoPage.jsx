@@ -9,7 +9,7 @@ function NoPage() {
   return (
     <div className="h-[100%] flex justify-center items-center mt-[50px]">
       <div className="flex flex-col items-center mb-20 mt-20 text-[40px]">
-        <h1>PAGE NOT FOUND</h1>
+        <h1>PAGE NOT AVAILABLE</h1>
         <h2>
           Go{" "}
           <span onClick={handleClick} className="underline cursor-pointer">
