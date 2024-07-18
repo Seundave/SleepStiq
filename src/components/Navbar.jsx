@@ -41,9 +41,9 @@ const Navbar = () => {
         </Link>
         <button onClick={toggleDropdown}>
           {showDropdown ? (
-            <MdCancel className="h-6 w-6 fill-current" />
+            <MdCancel className="h-6 w-6 fill-current" color="#12305B"/>
           ) : (
-            <FiMenu className="h-6 w-6 fill-current" />
+            <FiMenu className="h-6 w-6 fill-current" color="#12305B"/>
           )}
         </button>
       </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 to={el.link}
                 onClick={closeDropdown}
                 className={({ isActive }) =>
-                  isActive ? activeStyle : "text-[#202020]"
+                  isActive ? activeStyle : "text-[#12305B]"
                 }
               >
                 {el.page}
