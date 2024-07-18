@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Consumer advisory */}
-          <div className="xl:w-[32%] w-full mt-4 lg:mt-0">
+          <div className="xl:w-[32%] w-full mt-4 lg:mt-0 lg:ml-[20px] ml-0">
             <h1 className="footer-header-text font-semibold">
               CONSUMER ADVISORY
             </h1>
@@ -87,9 +87,9 @@ const Footer = () => {
           {/* Get in touch */}
           <div className="xl:w-[32%] md:flex md:flex-row flex flex-col w-full">
             <div className="hidden lg:block">
-              <div className="w-[1px] bg-[#5D6544] h-[200px] lg:ml-[20px]" />
+              <div className="w-[1px] bg-[#5D6544] h-[210px] lg:ml-[20px]" />
             </div>
-            <div className="block lg:hidden">
+            <div className="max-lg:block lg:hidden">
               <div className="w-full bg-[#5D6544] h-[1px] mt-6" />
             </div>
             <div className="lg:ml-[55px]">
