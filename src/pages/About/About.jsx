@@ -1,12 +1,13 @@
 import React from "react";
 import { aboutImageTwo } from "../../assets/About";
-import { AboutSleepStiq } from "../../constants/data";
+import { AboutSleepStiq, AllReviews } from "../../constants/data";
 import PrimaryButton from "../../reusables/PrimaryButton";
 import Reviews from "../Home/Reviews";
+import ReviewContent from "../../components/Review";
 
 const About = () => {
   return (
-    <div>
+    <div className="mb-[73px]">
       <div className="md:flex md:flex-row flex flex-col mx-[30px] lg:mx-[152px] gap-[30px] md:gap-[203px] items-center mt-[73px]">
         {/* product image container */}
         <div className="md:w-[48%] w-full">
@@ -55,10 +56,10 @@ const About = () => {
       </div>
 
       {/* Divider */}
-      <div className="container md:mb-[66px] mb-[30px] px-[30px] md:px-0">
+      <div className="md:mb-[66px] mb-[30px] max-md:mx-[30px] max-lg:px-[30px] lg:px-[152px]">
         <hr className="md:mt-[165px] mt-[30px] border-1 border-[#213842] border-opacity-[9.56%]" />
       </div>
-      <Reviews />
+      <ReviewContent testimonialBy={AllReviews} />
     </div>
   );
 };
