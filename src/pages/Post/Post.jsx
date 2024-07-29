@@ -22,6 +22,8 @@ const Post = () => {
     getPost();
   }, []);
 
+
+//   Median Test
   const getMedian = (num) => {
     const numbers = num.sort((a, b) => a - b);
     let length = numbers.length;
