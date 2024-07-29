@@ -24,6 +24,11 @@ const navData = [
     page: "FAQs",
     link: "/faqs",
   },
+  {
+    id: 4,
+    page: "Posts",
+    link: "/posts",
+  },
 ];
 
 const Testimonial = [
